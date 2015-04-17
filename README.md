@@ -3,6 +3,7 @@
 O projeto se basea nos modulos ZfcUser, ZfcUser-Doctrine, zfc-user-doctrine-orm, losbase,doctrine-module:
 instaladondo com composer.phar;
 
+```
 "require" : {
     "php" : ">=5.4.0",
     "zendframework/zendframework" : "~2.3",
@@ -16,6 +17,8 @@ instaladondo com composer.phar;
     "zendframework/zend-developer-tools" : "=0.0.2",
     "los/loslog" : "~1.0"
   },
+```
+
 
 ```
 $ cd your_repo_root/repo_name

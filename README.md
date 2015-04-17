@@ -1,4 +1,4 @@
-# Zf2-application-acl-rcbac-baseado-no-los
+# Zf2 application Acl Rcbac-Based in los
 ### Bem Vindo ao projeto Zf2 auto Crud .
 O projeto se basea nos modulos ZfcUser, ZfcUser-Doctrine, zfc-user-doctrine-orm, losbase,doctrine-module:
 instaladondo com composer.phar;

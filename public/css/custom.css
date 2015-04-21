@@ -1,0 +1,261 @@
+/* Author: Louis Holladay
+ * Website: AdminDesigns.com
+ * Last Updated: 01/01/14 
+ 
+ * This file is reserved for changes made by the user 
+ * as it's often a good idea to seperate your work from 
+ * the theme. It makes modifications, and future theme
+ * updates much easier 
+ *
+ */
+
+/* These styles have been placed here for
+* convience as they have a high chance of being
+* changed if one decides to modify the header
+-----------------------------------------------*/
+.header-btns > div > button:focus {
+    color: #666;
+}
+/*#loading {width: 10%}*/
+#loading .alert {z-index: 99999999999}
+#loading .alert {padding-left: 40%}
+#loading img{width: 50px; left: 50%; top: 50%;}
+
+/* Place custom styles below this line 
+---------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.50);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+
+.back-to-top:hover {    
+    background-color: rgba(255, 255, 255, 0.50);
+    border: 1px solid #000;
+    color: #000;
+    text-decoration:  none; 
+    font-size: 12px;
+    padding: 1em;
+}
+
+
+/* no exist  ----------- */
+@media only screen 
+and (min-device-width : 200px) 
+and (max-device-width : 319px) {
+    /* Styles */
+    #header-id{clear:both;position:relative;}
+    #topbar{clear:both;position:relative;width:20%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right { width:35%}
+    #dropdown-menu-login {width:80%; float:right !important;   }
+
+    .container .panel {width:160px;}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    /* Styles */
+    #header-id{clear:both;position:relative;}
+    #topbar{clear:both;position:relative;width:20%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right { width:35%}
+    #dropdown-menu-login {width:80%; float:right !important;   }
+
+    .container .panel {width:220px;}
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px ) 
+and (max-width : 397px) {
+    /* Styles */
+    #header-id{ clear:both;position:relative;}
+    #topbar{ clear:both; position:relative;width:20%; display: none;}
+
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left {width:30%}
+    .pull-left .img-responsive{width:100%}
+    #header-right { width:30%}
+    #dropdown-menu-login { width:80%; float:right !important;   }
+
+    .container .panel {width:200px;}
+    .container .panel .btn-group { margin-left:  auto; margin-right:  auto; width: 50px; margin-top: 5px; clear:both;}
+}
+
+
+@media only screen 
+and (min-width : 398px ) 
+and (max-width : 480px) {
+    /* Styles */
+    #header-id{ clear:both;position:relative;}
+    #topbar{ clear:both; position:relative;width:20%; display: none;}
+
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left {width:30%}
+    .pull-left .img-responsive{width:100%}
+    #header-right { width:30%}
+    #dropdown-menu-login { width:80%; float:right !important;   }
+
+    .container .panel {width:280px;}
+    .container .panel .btn-group { margin-left:  auto; margin-right:  auto; width: 50px; margin-top: 5px; clear:both;}
+
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    /* Styles */
+    #header-id{ clear:both;position:relative;}
+    #topbar{ clear:both; position:relative;width:30%; display: none;}
+
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right { width:30%}
+    #dropdown-menu-login { width:175px; float:left; margin-left: -120px;}
+}
+
+/* Neutro 1  ----------- */
+@media only screen 
+and (min-width : 480px) 
+and (max-width : 767px) {
+    /* Styles */
+
+    #header-id{clear:both;position:relative;}
+    #topbar{clear:both;position:relative;width:30%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right { width:15%}
+    #dropdown-menu-login {width:270px; float:left; margin-left: -220px;}
+
+}
+
+/* Neutro 2  ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 998px) {
+    /* Styles */
+
+    #header-id{ clear:both;position:relative;}
+    #topbar{ clear:both;position:relative;width:30%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right { width:10%}
+    #dropdown-menu-login { width:270px; float:left; margin-left: -220px;}
+
+}
+
+/* Neutro 3  ----------- */
+@media only screen 
+and (min-width : 999px) 
+and (max-width : 1223px) {
+    /* Styles */
+
+    #header-id{clear:both;position:relative;}
+    #topbar{clear:both;position:relative;width:30%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right { width:7%}
+    #dropdown-menu-login { width:270px; float:left; margin-left: -220px;}
+
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    /* Styles */
+    #header-id{border:1px yellow solid;clear:both;position:relative;}
+    #topbar{border:1px yellow solid;clear:both;position:relative;width:30%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { border: 2px yellow solid; width:30%}
+    .pull-left .img-responsive{ border: 2px yellow solid; width:100%}
+    #header-right { border: 2px yellow solid; width:30%}
+    #dropdown-menu-login {border: 2px yellow solid; width:80%; float:right !important;   }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    /* Styles */
+
+    #header-id{clear:both;position:relative;}
+    #topbar{clear:both;position:relative;width:30%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right { width:8%}
+    #dropdown-menu-login {width:300px; float:left; margin-left: -220px;}
+
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    /* Styles */
+    #header-id{ clear:both;position:relative;}
+    #topbar{ clear:both;position:relative;width:30%; display: none;}
+    // #sidebar-search{position:relative}
+    #topbar .breadcrumb{display: none;}
+
+    .pull-left { width:30%}
+    .pull-left .img-responsive{ width:100%}
+    #header-right {width:10%}
+    #dropdown-menu-login {width:370px; float:left; margin-left: -270px;}
+
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    /* Styles */
+}

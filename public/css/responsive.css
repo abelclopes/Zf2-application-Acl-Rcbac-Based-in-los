@@ -1,0 +1,138 @@
+/* Author: Louis Holladay
+ * Website: AdminDesigns.com
+ * Last Updated: 01/01/14 
+ 
+ * These styles control various aspects of the site
+ * which benefit from being responsive 
+ 
+---------------------------------------
+   GENERAL RESPONSIVE CSS
+--------------------------------------*/
+@media (max-width: 1450px) {
+	
+	#content {
+		margin-left: 210px;
+	}
+	#sidebar {
+		width: 210px;
+	}
+	#sidebar:before {
+		width: 210px;
+	}
+	#sidebar-search form {
+		max-width: 145px;	
+	}
+	.container {
+		padding: 25px 30px 50px 30px;
+	}
+}
+
+/* -----------------------------------
+   SIDE MENU COLLAPSED STATE 
+------------------------------------*/
+@media (max-width: 1200px) {
+
+/* Shrink Sidebar to the width of Title Icon */
+#sidebar { width: 40px; }
+#sidebar:before { width: 40px; }
+
+/* Shrink Breadcrumbs */
+#topbar {
+	height: 45px;
+	max-height: 45px;
+}
+.breadcrumb {padding-top: 14px;}
+
+/* Expand primary page content */	
+#content {margin-left: 40px;}
+#content:after {
+	box-shadow: none;
+	border-left: 1px solid #CCC;
+}
+
+/* Hide Search Form */
+#sidebar-search { display: none; }
+
+/* Convert Sidemenu items to absolute positions */
+ul.sidebar-nav .sidebar-title,
+ul.sidebar-nav ul.sub-nav {
+	display: none;
+	width: 200px;
+	position: absolute;
+	left: 40px;
+	z-index: 9999;
+	border: 1px solid #ccc;
+}
+
+/* Menu Icon */
+ul.sidebar-nav > li > a > .glyphicons,
+ul.sidebar-nav > li > a > .glyphicon {
+	margin-left: 2px;
+	border-right: 0;
+}
+/* Menu Title */
+ul.sidebar-nav .sidebar-title {
+	top: -1px;
+	text-indent: 20px;
+	height: 46px;
+	background: #CCC;
+	border-color: #AAA;
+}
+
+/* Hide Menu Caret */
+ul.sidebar-nav span.caret {display: none;}
+
+/* Sub-menu */
+ul.sidebar-nav ul.sub-nav {
+	height: auto !important;
+	top: 44px;
+	border-top: 1px solid #AAA;
+}
+
+/* Sub-menu items */
+ul.sidebar-nav ul.sub-nav li a{ padding: 13px 15px; }
+ul.sidebar-nav ul.sub-nav li:last-child a { padding: 13px 15px 20px ; }
+
+/* Hide all open menus as they are now absolute positioned */
+#sidebar-menu ul.sidebar-nav > li > ul.sub-nav.menu-open {
+	display: none;
+}
+
+/* Force open both menu title and Sub-menu on hover */
+ul.sidebar-nav li:hover ul,
+ul.sidebar-nav li:hover a,
+ul.sidebar-nav li:hover .sidebar-title {
+	display: block !important;
+}
+
+/* Prevent first menu item from expanding on hover as 
+ * it will overlap breadcrumbs. Its best to make the
+ * first item a single link and not a dropdown menu */
+ul.sidebar-nav li:first-child:hover ul.sub-nav,
+ul.sidebar-nav li:first-child:hover .sidebar-title {
+	display: none !important;
+}
+}
+
+/*---------------------------------------
+   DASHBOARD REPONSIVE STYLES
+--------------------------------------*/
+/* The frontpage console buttons are fluid which makes
+* them an asthetic challenge because they contain text
+* So we hide the search bar by default and only show it
+* on extra large screens (typical desktops 1368px and up) */
+
+#console-btns #console-search-btn {
+	display: none;
+}
+
+@media (min-width: 1368px) {
+	#console-btns .row > div {
+		width: 16.666666666666664%;
+	}
+	#console-btns #console-search-btn {
+		display: block;
+		width: 33.33333333333333%;
+	}
+}
+

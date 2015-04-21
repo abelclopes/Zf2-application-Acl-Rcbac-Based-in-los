@@ -1,0 +1,50 @@
+{
+    "name": "rwoverdijk/assetmanager",
+    "description": "An assetmanager module for Zend Framework 2.",
+    "license": "BSD-2-Clause",
+    "type": "library",
+    "keywords": [
+        "asset",
+        "asset manager",
+        "zf2",
+        "zend framework 2"
+    ],
+    "homepage": "https://github.com/RWOverdijk/AssetManager",
+    "authors": [
+        {
+            "name": "Wesley Overdijk",
+            "email": "r.w.overdijk@gmail.com",
+            "homepage": "http://blog.spoonx.nl/"
+        },
+        {
+            "name": "Marco Pivetta",
+            "email": "ocramius@gmail.com",
+            "homepage": "http://ocramius.github.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zend-modulemanager": "2.*",
+        "zendframework/zend-stdlib": "2.*",
+        "zendframework/zend-servicemanager": "2.*",
+        "zendframework/zend-loader": "2.*",
+        "zendframework/zend-eventmanager": "2.*",
+        "zendframework/zend-mvc": "2.*",
+        "kriswallsmith/assetic": "~1.2.1"
+    },
+    "require-dev": {
+        "zendframework/zendframework": "2.*",
+        "phpunit/phpunit": "~4.0",
+        "squizlabs/php_codesniffer": "1.5.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "AssetManager": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "AssetManagerTest": "tests"
+        }
+    }
+}

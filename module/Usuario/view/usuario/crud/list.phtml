@@ -1,0 +1,42 @@
+<div class="row">
+    <div class=" col-lg-1"></div>
+    <div class=" col-lg-10">
+	<div class="panel">
+	    <div class="panel-heading">
+		<div class="panel-title">
+		    <h3><i class="glyphicon glyphicon-list"></i> <?php echo $this->translate('Usuarios'); ?></h3>
+		</div>
+	    </div>
+	    <div class="panel-body">
+		<table id="list" class="table table-hover table-striped">
+		    <thead>
+			<tr>
+			    <th class="col-xs-11">Id</th>
+			    <th class="col-xs-1"><a href="<?php echo $this->losUrl()->from('usuario/add', [], true) ?>" class="btn btn-sm btn-success pull-right"><?= $this->losIcon('glyphicon-plus') ?></a></th>
+			</tr>
+		    </thead>
+		    <tbody>
+			<?php foreach ($this->paginator as $entity): ?>
+    			<tr class="linha">
+    			    <td><?= $entity->getId() ?></td>
+    			    <td class="text-right">
+    				<a href="<?php echo $this->losUrl()->from('usuario/edit', ['id' => $entity->getId()], true) ?>" class="btn btn-xs btn-warning"><?= $this->losIcon('glyphicon-edit') ?></a>
+    				<a href="<?php echo $this->losUrl()->from('usuario/delete', ['id' => $entity->getId()], true) ?>" class="btn btn-xs btn-danger"><?= $this->losIcon('glyphicon-trash') ?></a>
+    			    </td>
+    			</tr>
+			<?php endforeach; ?>
+		    </tbody>
+		</table>
+
+		<div class="panel-footer">
+		    <?php if ($this->paginator->count() > 1): ?>
+    		    <div class="row">
+    			<div class="col-xs-12 text-center"><?= $this->losPaginationControl($this->paginator, 'Sliding', null, ['query' => $this->query]); ?></div>
+    		    </div>
+		    <?php endif ?>
+		</div>
+	    </div>
+	</div>
+    </div>
+    <div class=" col-lg-1"></div>
+</div>

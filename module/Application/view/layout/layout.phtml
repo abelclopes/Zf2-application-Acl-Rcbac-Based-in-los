@@ -1,0 +1,126 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	<?php echo $this->headTitle('Zf2 tutorial')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+	<?php
+	echo $this->headMeta()
+		->appendName('viewport', 'width=device-width, initial-scale=1.0')
+		->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+	?>
+
+	<?php
+	echo $this->losHeadLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+		->appendStylesheet($this->basePath() . '/css/customizer.css')
+		->appendStylesheet($this->basePath() . '/css/theme.css')
+		->appendStylesheet($this->basePath() . '/css/css.css')
+		->appendStylesheet($this->basePath() . '/css/demo.css')
+		->prependBootstrap()
+		->appendFontAwesome()
+	?>
+
+	<?php
+	echo $this->losHeadScript()
+		->prependBootstrap()
+		->prependJquery();
+	?>
+
+	<?= $this->headStyle() ?>
+
+    </head>
+    <body>
+	<?php if ($this->ZfcUserIdentity()): ?>
+    	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    	    <div class="container">
+    		<div class="navbar-header">
+    		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    		    </button>
+    		    <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Zf2 tutorial') ?></a>
+    		</div>
+    		<div class="collapse navbar-collapse">
+    		    <ul class="nav navbar-nav">
+			    <?php echo $this->losNavigation()->menu('Navigation') ?>
+    		    </ul>
+    		    <ul class="nav navbar-nav navbar-right">
+    			<li class="dropdown">
+    			    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->ZfcUserIdentity() ?> <span class="caret"></span></a>
+    			    <ul class="dropdown-menu" role="menu">
+    				<li><a href="<?= $this->url('zfcuser/logout') ?>"><?php echo $this->translate('Sair'); ?></a></li>
+    			    </ul>
+    			</li>
+    		    </ul>
+    		</div><!--/.nav-collapse -->
+
+    	    </div>
+    	</nav>
+	<?php else:; ?>
+    	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    	    <div class="container">
+    		<div class="navbar-header">
+    		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    		    </button>
+    		    <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Zf2 tutorial') ?></a>
+    		</div>
+    		<div class="collapse navbar-collapse">
+    		    <ul class="nav navbar-nav">
+    			<li>
+    			    <a href="/">Home</a>
+    			</li>
+    			<li>
+    			    <a href="/sobre">Sobre</a>
+    			</li>    			    
+			    <?php // echo $this->losNavigation()->menu('Navigation') ?>
+    		    </ul>
+    		    <ul class="nav navbar-nav navbar-right">
+    			<li><a href="<?= $this->url('zfcuser/login') ?>" class="" >Login <span class="caret"></span></a></li>
+    		    </ul>
+    		</div><!--/.nav-collapse -->
+
+    	    </div>
+    	</nav>
+
+	<?php endif; ?>
+
+
+	<!-- Start: Content -->
+	<section id="content">
+	    <div id="topbar">
+		<ol class="breadcrumb">
+		    <?php echo $this->losNavigation()->breadcrumbs('Navigation') ?>
+	    </div>
+	    <?php
+//	    if()
+	    ?>
+	    <style>
+		.content {
+		    margin-left: 0px !important; 
+		}
+	    </style>
+	    <?php
+	    ?>
+	    <div class="container">
+
+		<div class="container">
+		    <?php echo $this->losflashmessenger()->renderAll() ?>
+		    <?php echo $this->content; ?>
+		</div> 
+	    </div>
+	</section>
+        <nav class="navbar navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                <p class="help-block">&copy; <?php echo date('Y') ?> <a href="mailto://leandro@leandrosilva.info" target="_blank">Leandro Silva</a>. <?php echo $this->translate('All rights reserved.') ?></p>
+            </div>
+        </nav>
+
+	<?php echo $this->inlineScript() ?>
+
+    </body>
+</html>
